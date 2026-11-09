@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Al imprimir solo se muestra el documento generado */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #documento-impreso,
+  #documento-impreso * {
+    visibility: visible;
+  }
+  #documento-impreso {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
